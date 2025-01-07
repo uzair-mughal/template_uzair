@@ -17,10 +17,15 @@ def all_questions() -> None:
     answers = {}
 
     # Return the sum of 3 and 7
-    answers["q1"] = None
+    answers["q1"] = 3 + 7
 
     # Return the first 8 Fibonacci numbers, starting with 0
-    answers["q2"] = None
+    fib = [0] * 8
+    fib[1] = 1
+    for i in range(2, 8):
+        fib[i] = fib[i - 1] + fib[i - 2]
+
+    answers["q2"] = fib
 
     # Return a plot of y versus x, where
     # x = [0, 1, 2, 3, 4, 5]
